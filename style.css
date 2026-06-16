@@ -1,4 +1,4 @@
-@font-face {
+@font-face{
     font-family: 'Teko';
     src: url(./fonts/Teko-VariableFont_wght.woff);
 }
@@ -7,18 +7,7 @@
     padding:0;
     box-sizing: border-box;
 }
-.logo a,
-.logo a:visited,
-.logo a:hover,
-.logo a:active {
-    text-decoration: none;
-    color: #DC2626;
-    cursor: pointer;
-    letter-spacing: 2px;
-    font-family: 'Teko';
-    font-size: 3rem;
-    font-weight: bold;
-}
+
 
 html{
     scroll-behavior: smooth;
@@ -421,7 +410,7 @@ footer p {
   .hero_btn {
     justify-content: center;
   }
-
+}
 
 @media (max-width: 768px) {
 
@@ -570,4 +559,96 @@ footer p {
         color: #DC2626;
     }
 }
+.logo a, 
+.logo a:visited, 
+.logo a:hover, 
+.logo a:active{ 
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    text-decoration: none;
+    color: #DC2626; 
+    cursor: pointer; 
+    letter-spacing: 2px; 
+    font-family: 'Teko'; 
+    font-size: 3rem; 
+    font-weight: bold;
 }
+
+.logo-name{
+    position:relative;
+    display:inline-block;
+    font-family:'Teko',sans-serif;
+    font-size:3rem;
+    font-weight:700;
+    color:#DC2626;
+    letter-spacing:2px;
+    line-height:1;
+}
+
+.logo-slice{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    color:#F97316;
+    opacity:0;
+    pointer-events:none;
+}
+
+.logo-slice-1{
+    animation:slice1 6s infinite;
+}
+
+.logo-slice-2{
+    animation:slice2 6s infinite;
+}
+
+@keyframes slice1{
+    0%,95%,100%{
+        opacity:0;
+        transform:translateX(0);
+    }
+    96%{
+        opacity:.7;
+        transform:translateX(-3px);
+    }
+    97%{
+        opacity:.7;
+        transform:translateX(3px);
+    }
+}
+
+@keyframes slice2{
+    0%,95%,100%{
+        opacity:0;
+        transform:translateX(0);
+    }
+    96%{
+        opacity:.5;
+        transform:translateX(2px);
+    }
+    97%{
+        opacity:.5;
+        transform:translateX(-2px);
+    }
+}
+
+.logo-bottom{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logo-line{
+    width:25px;
+    height:2px;
+    background:#DC2626;
+}
+
+.logo-sub{
+    font-size:.55rem;
+    letter-spacing:3px;
+    color:#6B7280;
+}
+
